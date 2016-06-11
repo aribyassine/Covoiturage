@@ -2,79 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f04afd2-7c76-40dd-aa13-f3ea2f2a7f1e" name="Default" comment="covoiturage mes covoiturage en cour">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/header1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/header2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/header3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.env" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/errors/ModelNotFoundException.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2015_05_18_191945_create_foreign_keys.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/BGbluegray.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/BGubuntu.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/Background.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/Brute Flare.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/DefaultDesktop.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/Gloomy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/Granade Grunge.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/Hey.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/Mountania.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/Neval Light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/Orange Blood.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/Sea Water.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/Sunny Grunge.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/aurora.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/desertkiss.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/elixir.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/glasspane.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/images.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/map-hd.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/meadow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/rocky.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/covoiturage/covoituragesRecents.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/covoiturage/details2.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/laravel.iml" afterPath="$PROJECT_DIR$/.idea/laravel.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CovoiturageController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CovoiturageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/NotificationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/NotificationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Services/Registrar.php" afterPath="$PROJECT_DIR$/app/Services/Registrar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/password.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/password.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/reset.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/reset.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/commentcamarche.blade.php" afterPath="$PROJECT_DIR$/resources/views/commentcamarche.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/covoiturage/details.blade.php" afterPath="$PROJECT_DIR$/resources/views/covoiturage/details.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/covoiturage/mesCovoiturage/reservation.blade.php" afterPath="$PROJECT_DIR$/resources/views/covoiturage/mesCovoiturage/reservation.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/notification.blade.php" afterPath="$PROJECT_DIR$/resources/views/notification.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/profil.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/profil.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/app/.gitignore" afterPath="$PROJECT_DIR$/storage/app/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2015_04_21_224513_create_commentaires_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_06_09_124839_create_commentaires_table.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2015_04_21_224513_create_covoiturages_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_06_09_124839_create_covoiturages_table.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2015_04_21_224513_create_user_covoiturage_inscrits_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_06_09_124839_create_user_covoiturage_inscrits_table.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2015_04_21_224513_create_user_covoiturage_preinscrits_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_06_09_124839_create_user_covoiturage_preinscrits_table.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2015_04_21_224513_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_06_09_124839_create_users_table.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2015_04_21_224513_create_villes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_06_09_124839_create_villes_table.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2015_04_21_224523_create_foreign_keys.php" afterPath="$PROJECT_DIR$/database/migrations/2015_06_09_124849_create_foreign_keys.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2015_04_26_102337_create_notes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_06_09_124839_create_notes_table.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2015_05_12_092357_create_notifications_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_06_09_124839_create_notifications_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <list id="4621a52f-9d28-4336-b187-59ffb2879c19" name="Rejected commit: Default" comment="inscription" />
     <list id="57411d00-d51a-4fd4-9f9e-7e295b231049" name="Failed commit: Default" comment="covoiturage mes covoiturage en cour" />
@@ -124,13 +52,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="6.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/app/6.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="5.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storage/app/5.jpg">
           <provider selected="true" editor-type-id="images">
@@ -173,12 +94,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storage/app/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
               <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="330">
+                <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -221,6 +155,7 @@
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/app/Services/Registrar.php" />
         <option value="$PROJECT_DIR$/storage/app/.gitignore" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -765,7 +700,7 @@
       <option name="presentableId" value="Default" />
       <updated>1428354967833</updated>
       <workItem from="1465661373478" duration="764000" />
-      <workItem from="1465664849384" duration="2346000" />
+      <workItem from="1465664849384" duration="2661000" />
     </task>
     <task id="LOCAL-00001" summary="inscription">
       <created>1428701640027</created>
@@ -827,7 +762,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3110000" />
+    <option name="totallyTimeSpent" value="3425000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -945,13 +880,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/covoiturage/mesCovoiturage/annonce.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1292,6 +1220,17 @@
         <state relative-caret-position="110">
           <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="330">
+            <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
