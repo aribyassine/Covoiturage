@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel </title>
+	<title>Covoiturage DZ</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/font-awesome-4.3.0/css/font-awesome.min.css') }}" rel="stylesheet">
@@ -42,7 +42,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="{{url('/')}}">Nom du site</a>
+				<a class="navbar-brand" href="{{url('/')}}">Covoiturage <span class="glyphicon glyphicon-map-marker"></span> </a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -95,7 +95,7 @@
                             	</li>
 								<li>
 								    <a href="{{ url('/auth/logout') }}">
-								    <span class="glyphicon glyphicon-off"></span> Logout</a>
+								    <span class="glyphicon glyphicon-off"></span> Se déconnecter</a>
 								</li>
 							</ul>
 						</li>
@@ -112,16 +112,6 @@
 	<!--<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>-->
 	<script src="{{ asset('Flat-UI-master/dist/js/flat-ui.min.js') }}"></script>
 	<script src="{{ asset('Flat-UI-master/docs/assets/js/application.js') }}"></script>
-
-    @if (Auth::check())
-        @if($nb_notif >0)
-            <script>
-                @foreach($notifications as $notification)
-                    $("#notif{{$notification->id}}")
-                @endforeach
-            </script>
-        @endif
-    @endif
 
     @yield('script_ajax')
     @yield('script_register')

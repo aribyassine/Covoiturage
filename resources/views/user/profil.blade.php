@@ -38,6 +38,7 @@
                         {{$user->conducteurCovoiturages->count()}}
                     </li>
                 </ul>
+                @if(Auth::User())
                 <button class="btn btn-primary btn-group-justified" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                    Numéro de téléphone
                    <span class="glyphicon glyphicon-earphone"></span>
@@ -54,6 +55,7 @@
                            </div>
                        @endif
                 </div>
+                @endif
             </div>
         </div>
         @if($user->notesRecu->count()>0)
@@ -85,7 +87,8 @@
                         <strong class="text-danger">A éviter!</strong>
                         @endif
                         <br>
-                    <small> De <strong>{{$noterecu->noteur->prenom.' '.$noterecu->noteur->nom[0]}}</strong></small></h4>
+                        <small> De <strong>{{$noterecu->noteur->prenom.' '.$noterecu->noteur->nom[0]}}</strong></small>
+                    </h4>
                     {{$noterecu->avis}}
                   </div>
                 </div>
@@ -119,7 +122,7 @@
                            <tr>
                                <td>
                                    <h4>
-                                      préférences:&nbsp;
+                                      Préférences:&nbsp;
                                    </h4>
                                </td>
                                <td>
@@ -129,9 +132,9 @@
                                       <span class="label label-default"><i class="fa fa-music"></i> Musique</span>
                                   @endif
                                   @if ($user->pref_animeaux==1)
-                                      <span class="label label-success"><i class="fa fa-paw"></i> Animeaux</span>
+                                      <span class="label label-success"><i class="fa fa-paw"></i> Animaux</span>
                                   @else
-                                      <span class="label label-default"><i class="fa fa-paw"></i> Animeaux</span>
+                                      <span class="label label-default"><i class="fa fa-paw"></i> Animaux</span>
                                   @endif
                                   @if ($user->pref_discussion==1)
                                       <span class="label label-success"><i class="fa fa-comments"></i> Discussion</span>
@@ -161,6 +164,7 @@
                 </div>
             </div>
         </div>
+        @if(Auth::User())
         @if( $acces_avis )
         <div class="panel panel-info">
             <div class="panel-heading">
@@ -204,8 +208,9 @@
                     <button type="submit" class="btn btn-default">Envoyer</button>
                 </form>
             </div>
-    </div>
-    @endif
+        </div>
+        @endif
+        @endif
 </div>
 </div>
 

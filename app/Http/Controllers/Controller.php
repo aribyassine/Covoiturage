@@ -74,11 +74,11 @@ abstract class Controller extends BaseController {
         $covoiturages = $covoiturages
             ->whereHas('villeDepart', function($q)
                 {
-                    $q->where(DB::raw($this->formule($this->ville_d->latitude,$this->ville_d->longitude)) ,'<=', '50');
+                    $q->where(DB::raw($this->formule($this->ville_d->latitude,$this->ville_d->longitude)) ,'<=', '20');
                 }
             )->whereHas('villeArrivee', function($q)
                 {
-                    $q->where(DB::raw($this->formule($this->ville_a->latitude,$this->ville_a->longitude)) ,'<=', '50');
+                    $q->where(DB::raw($this->formule($this->ville_a->latitude,$this->ville_a->longitude)) ,'<=', '20');
                 }
             )->get();
 

@@ -63,6 +63,16 @@ class CreateForeignKeys extends Migration {
 						->onDelete('cascade')
 						->onUpdate('cascade');
 		});
+		Schema::table('notes', function(Blueprint $table) {
+			$table->foreign('noteur_id')->references('id')->on('users')
+						->onDelete('cascade')
+						->onUpdate('no action');
+		});
+		Schema::table('notes', function(Blueprint $table) {
+			$table->foreign('notee_id')->references('id')->on('users')
+						->onDelete('cascade')
+						->onUpdate('no action');
+		});
 	}
 
 	public function down()
@@ -99,6 +109,12 @@ class CreateForeignKeys extends Migration {
 		});
 		Schema::table('user_covoiturage_inscrits', function(Blueprint $table) {
 			$table->dropForeign('user_covoiturage_inscrits_user_id_foreign');
+		});
+		Schema::table('notes', function(Blueprint $table) {
+			$table->dropForeign('notes_noteur_id_foreign');
+		});
+		Schema::table('notes', function(Blueprint $table) {
+			$table->dropForeign('notes_notee_id_foreign');
 		});
 	}
 }

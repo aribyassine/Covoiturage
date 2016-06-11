@@ -9,15 +9,15 @@
 				<div class="panel-body">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-							<strong>Whoops!</strong> Une erreur est survenue.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
+						    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+						    	<strong>Whoops!</strong> Une erreur est survenue.<br><br>
+						    	<ul>
+						    		@foreach ($errors->all() as $error)
+						    			<li>{{ $error }}</li>
+						    		@endforeach
+						    	</ul>
 						</div>
 					@endif
 
@@ -52,7 +52,7 @@
 							<div class="col-md-6 col-md-offset-4">
 								<button type="submit" class="btn btn-primary">Connexion</button>
 
-								<a class="btn btn-link" href="{{ url('/password/email') }}">vous avez oublié votre mot de passe ?</a>
+								<a class="btn btn-link" href="{{ url('/password/email') }}"> Vous avez oublié votre mot de passe ?</a>
 							</div>
 						</div>
 					</form>

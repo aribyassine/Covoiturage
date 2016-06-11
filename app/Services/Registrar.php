@@ -109,7 +109,7 @@ class Registrar implements RegistrarContract
             return false; // Si aucun code n'est entré, on ne cherche pas plus loin
         }
         $params = [
-            'secret'    => '6LdBCAYTAAAAACB_gvA4vqumNYNzqieMpHfiJFdM',
+            'secret'    => '6LfmXCITAAAAAET5p3tJru8suJsjDWbNd5xlpMsa',
             'response'  => $code
         ];
         if( $ip ){
@@ -131,7 +131,6 @@ class Registrar implements RegistrarContract
         if (empty($response) || is_null($response)) {
             return false;
         }
-
         $json = json_decode($response);
         return $json->success;
     }

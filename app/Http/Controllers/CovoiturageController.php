@@ -18,7 +18,6 @@ class CovoiturageController extends Controller
 
     public function __construct(){
         parent::__construct();
-        $this->middleware('auth');
     }
     /**
      * Display a listing of the resource.
@@ -146,6 +145,8 @@ class CovoiturageController extends Controller
 
         $acces_tel =false;
 
+        if($auth){
+
         $user->inscriptions->each(function($inscription) use (&$acces_tel){
             //inscrits au même covoiturage
             if($inscription->inscrits->contains(Auth::User())){
@@ -162,6 +163,7 @@ class CovoiturageController extends Controller
                 $acces_tel=true;
             }
         });
+    }
 
         return view('covoiturage.details')->with(compact('covoiturage','auth','acces_tel'));
     }

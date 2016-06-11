@@ -60,7 +60,7 @@
 						</div>
 
                         <div class="form-group">
-							<label class="col-md-4 control-label">Prenom</label>
+							<label class="col-md-4 control-label">Prénom</label>
 							<div class="col-md-6">
 								<input type="text" class="form-control" name="prenom" value="{{ old('prenom') }}" required>
 							</div>
@@ -105,7 +105,7 @@
                          <input type="hidden"  id="wilaya" class="form-control" name="wilaya" value="{{ old('wilaya') }}">
                          <input type="hidden"  id="geoloc" class="form-control" name="geoloc" value="{{ old('geoloc') }}">
                         <!-- hidden fin-->
-                        <div class="well text-center"><h4>vos préférences de voyage</h4></div>
+                        <div class="well text-center"><h4>Vos préférences de voyage</h4></div>
 
                         <div class="form-group">
                         	<label class="col-md-4 control-label">Musique</label>
@@ -122,7 +122,7 @@
                         </div>
 
                         <div class="form-group">
-                        	<label class="col-md-4 control-label">Animeaux</label>
+                        	<label class="col-md-4 control-label">Animaux</label>
                         	<div class="col-md-6">
                         	    <div class="btn-group" data-toggle="buttons">
                                   <label class="btn btn-default active">
@@ -178,7 +178,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="g-recaptcha col-md-offset-4" data-sitekey="6LdBCAYTAAAAAIUdAbpVGM-wWR2ByhKJzWhuAtDZ" style="padding: 15px"></div>
+                            <div class="g-recaptcha col-md-offset-4" data-sitekey="6LfmXCITAAAAAMmKvBnlrN780RdjN8JAWWyPaMnX" style="padding: 15px"></div>
                         </div>
 
 						<div class="form-group">

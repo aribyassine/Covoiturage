@@ -3,7 +3,7 @@
     <div class="col-md-6">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Mes Réservation</h3>
+            <h3 class="panel-title">Mes réservations</h3>
           </div>
           <div class="panel-body">
             @if(($reservations->count() + $reservations_confirmees->count()) >0)
@@ -34,7 +34,7 @@
                   <div class="panel-body">
 
                   <table class="table table-hover">
-                      <thead><strong>Les passager de ce covoiturage</strong></thead>
+                      <thead><strong>Les passagers de ce covoiturage</strong></thead>
                       <tbody id="{{$reservation->id}}">
                       <?php $conducteur = $reservation->conducteur ;?>
                         <tr>
@@ -43,7 +43,7 @@
                             <td>{{ \Carbon\Carbon::createFromTimestamp(strtotime($conducteur->date_nais))->age }} ans</td>
                             <td>
                               <a href="{{ route('user/show',$conducteur->id) }}" class=" btn btn-xs btn-inverse">
-                                  voir le profil <span class=" glyphicon glyphicon-chevron-right"></span>
+                                  Voir le profil <span class=" glyphicon glyphicon-chevron-right"></span>
                               </a>
                               <small>(conducteur)</small>
                             </td>
@@ -78,10 +78,11 @@
 
                                           <div class="modal-footer">
                                             <form role="form" method="POST" action="{{ route('covoiturage/cancel') }}">
+                                                <div class="pull-left">Voulez-vous vraiment annuler votre réservation? </div>
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <input type="hidden" name="covoiturage_id" value="{{ $reservation->id }}">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                                <button type="submit" class="btn btn-primary">Confirmer</button>
                                             </form>
                                           </div>
                                         </div>
@@ -89,7 +90,7 @@
                                     </div>
                                     @else
                                     <a href="{{ route('user/show',$inscrit->id) }}" class=" btn btn-xs btn-primary">
-                                        voir le profil <span class=" glyphicon glyphicon-chevron-right"></span>
+                                        Voir le profil <span class=" glyphicon glyphicon-chevron-right"></span>
                                     </a>
                                     @endif
                                   </td>
@@ -129,7 +130,7 @@
                   <div class="panel-body">
 
                   <table class="table table-hover">
-                      <thead><strong>Les passager de ce covoiturage</strong></thead>
+                      <thead><strong>Les passagers de ce covoiturage</strong></thead>
                       <tbody>
                           <?php $conducteur = $reservation->conducteur ;?>
                           <tr>
@@ -138,7 +139,7 @@
                               <td>{{ \Carbon\Carbon::createFromTimestamp(strtotime($conducteur->date_nais))->age }} ans</td>
                               <td>
                                 <a href="{{ route('user/show',$conducteur->id) }}" class=" btn btn-xs btn-inverse">
-                                    voir le profil  <span class=" glyphicon glyphicon-chevron-right"></span>
+                                    Voir le profil  <span class=" glyphicon glyphicon-chevron-right"></span>
                                 </a>
                                 <small>(conducteur)</small>
                               </td>
@@ -174,8 +175,8 @@
                                           <form role="form" method="POST" action="{{ route('covoiturage/cancel_reservation') }}">
                                               <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                               <input type="hidden" name="covoiturage_id" value="{{ $reservation->id }}">
-                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                              <button type="submit" class="btn btn-primary">Save changes</button>
+                                              <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                              <button type="submit" class="btn btn-primary">Confirmer</button>
                                           </form>
                                         </div>
                                       </div>
@@ -192,7 +193,7 @@
                                   <td>{{ \Carbon\Carbon::createFromTimestamp(strtotime($inscrit->date_nais))->age }} ans</td>
                                   <td>
                                     <a href="{{ route('user/show',$inscrit->id) }}" class=" btn btn-xs btn-primary">
-                                        voir le profil <span class=" glyphicon glyphicon-chevron-right"></span>
+                                        Voir le profil <span class=" glyphicon glyphicon-chevron-right"></span>
                                     </a>
                                   </td>
                               </tr>
@@ -206,7 +207,7 @@
             @endforeach
             </div>
             @else
-            <div class="alert alert-info">Aucune réservation en cour</div>
+            <div class="alert alert-info">Aucune réservation en cours</div>
             @endif
           </div>
         </div>

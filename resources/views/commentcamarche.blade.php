@@ -9,8 +9,8 @@ class="active"
     <div class="row" style="background-color: #ffffff; padding: 40px 40px">
         <div class="col-md-12">
             <h1 id="timeline"> Comment ça marche</h1>
-                <p>C’est très simple !
-                   Les conducteurs proposent leurs places libres dans leur véhicule et les passagers intéressés par le même trajet peuvent réserver leur place et n’auront plus qu’à voyager ensemble.</p>
+                <p>C’est très simple !<br>
+                   Les conducteurs proposent leurs places libres et les passagers intéressés par le même trajet peuvent réserver leur place et n’auront plus qu’à voyager ensemble.</p>
                 <p>Simple, économique et convivial, le covoiturage permet aujourd’hui à des millions de conducteurs d’effectuer d’importantes économies sur leurs déplacements, et aux passagers de voyager au meilleur prix vers des milliers de destinations !</p>
         </div>
         <div class="col-md-6">
@@ -34,7 +34,7 @@ class="active"
                       <h4 class="timeline-title">Choisissez votre conducteur</h4>
                     </div>
                     <div class="timeline-body">
-                        <p>Choisissez parmi les conducteurs proposant des trajets qui vous conviennent. Si vous voulez des précisions sur un trajet, vous pouvez envoyer un message au conducteur.</p>
+                        <p>Choisissez parmi les conducteurs proposant les trajets qui vous conviennent. Si vous voulez des précisions sur un trajet, vous pouvez envoyer une question publique au conducteur.</p>
                     </div>
                   </div>
                 </li>

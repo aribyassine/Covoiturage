@@ -29,7 +29,7 @@ class HomeController extends Controller {
             ->select('id','date_depart','prix','vehicule','conducteur_id','ville_arrivee_id','ville_depart_id')
             ->where('date_depart', '>', date("Y-m-d H:i:s"))
             ->orderBy('date_depart')
-            ->take(5)
+            ->take(3)
             ->get();
 
         $bonplans = Covoiturage::with('villeDepart','villeArrivee','conducteur')
@@ -37,7 +37,7 @@ class HomeController extends Controller {
             ->where('prix','=','0')
             ->where('date_depart', '>', date("Y-m-d H:i:s"))
             ->orderBy('date_depart')
-            ->take(5)
+            ->take(3)
             ->get();
 
         $pasLoins = $this->covoituragesMoinDe(100,Auth::User()->ville,3);

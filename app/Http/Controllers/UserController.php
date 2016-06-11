@@ -100,45 +100,48 @@ class UserController extends Controller {
 
       $this->acces_tel=false;
       $this->acces_avis=false;
+      if(Auth::User()){
+        //inscrits au même covoiturage
+        $user->inscriptions->each(function($inscription){
+            if($inscription->inscrits->contains(Auth::User())){
+                $this->acces_tel=true;
+            }
+        //je suis le conducteur
+            if($inscription->conducteur->id == Auth::User()->id){
+                $this->acces_tel=true;
+            }
+        });
+        // il est le conducteur
+        $user->conducteurCovoiturages->each(function($covoiturage){
+            if($covoiturage->inscrits->contains(Auth::User())){
+                $this->acces_tel=true;
+                if($covoiturage->isPast()){
+                    $this->acces_avis=true;
+                }
+            }
+        });
 
-      //inscrits au même covoiturage
-      $user->inscriptions->each(function($inscription){
-          if($inscription->inscrits->contains(Auth::User())){
-              $this->acces_tel=true;
-          }
-      //je suis le conducteur
-          if($inscription->conducteur->id == Auth::User()->id){
-              $this->acces_tel=true;
-          }
-      });
-      // il est le conducteur
-      $user->conducteurCovoiturages->each(function($covoiturage){
-          if($covoiturage->inscrits->contains(Auth::User())){
-              $this->acces_tel=true;
-              if($covoiturage->isPast()){
-                  $this->acces_avis=true;
-              }
-          }
-      });
-      $acces_tel=$this->acces_tel;
-      $acces_avis=$this->acces_avis;
-
-      if($acces_avis)
-      $note = $user->notesRecu->filter(function($note)
-      {
-          return $note->noteur_id == Auth::User()->id;
-      })->first();
-
-      if(isset($note)){
-          $avis = $note->avis;
-          $note = $note->note;
       }
-      else{
-          $avis = '';
-          $note = '';
-      }
+        $acces_tel=$this->acces_tel;
+        $acces_avis=$this->acces_avis;
 
-      $notesrecu=$user->notesRecu()->with('noteur')->orderBy('updated_at','desc')->get()->take(8);
+        if($acces_avis)
+        $note = $user->notesRecu->filter(function($note)
+        {
+            return $note->noteur_id == Auth::User()->id;
+        })->first();
+
+        if(isset($note)){
+            $avis = $note->avis;
+            $note = $note->note;
+        }
+        else{
+            $avis = '';
+            $note = '';
+        }
+
+        $notesrecu=$user->notesRecu()->with('noteur')->orderBy('updated_at','desc')->get()->take(8);
+
 
       return  view('user.profil')->with(compact('user','acces_tel','acces_avis','avis','note','notesrecu'));
   }

@@ -11,11 +11,15 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', [
+    'uses' =>'WelcomeController@index',
+    'middleware' => 'guest'
+]);
 
 Route::get('acceuil', [
     'as' => 'home',
-    'uses' => 'HomeController@index'
+    'uses' => 'HomeController@index',
+    'middleware' => 'auth'
 ]);
 Route::controllers([
     'auth' => 'Auth\AuthController',
@@ -29,6 +33,7 @@ Route::get('covoiturage/publier', [
 Route::post('covoiturage/enregistrer',[
     'as' => 'covoiturage/store',
     'uses' => 'CovoiturageController@store',
+    'middleware' => 'auth'
 ]);
 Route::post('covoiturage/recherche',[
     'as' => 'covoiturage/search',
@@ -41,33 +46,40 @@ Route::get('covoiturage/{id}', [
 
 Route::get('covoiturage', [
     'as' => 'covoiturage/index',
-    'uses' => 'CovoiturageController@index'
+    'uses' => 'CovoiturageController@index',
+    'middleware' => 'auth'
 ]);
 Route::post('covoiturage/inscription',[
     'as'=>'covoiturage/register',
-    'uses'=>'CovoiturageController@register'
+    'uses'=>'CovoiturageController@register',
+    'middleware' => 'auth'
 ]);
 
 /*-------------------------------------------------------------*/
 Route::post('covoiturage/accepter',[
     'as'=>'covoiturage/accept',
-    'uses'=>'CovoiturageController@accept'
+    'uses'=>'CovoiturageController@accept',
+    'middleware' => 'auth'
 ]);
 Route::post('covoiturage/refuser',[
     'as'=>'covoiturage/refuse',
-    'uses'=>'CovoiturageController@refuse'
+    'uses'=>'CovoiturageController@refuse',
+    'middleware' => 'auth'
 ]);
 Route::post('covoiturage/annuler',[
     'as'=>'covoiturage/cancel',
-    'uses'=>'CovoiturageController@cancel'
+    'uses'=>'CovoiturageController@cancel',
+    'middleware' => 'auth'
 ]);
 Route::post('covoiturage/annuler_resarvation',[
     'as'=>'covoiturage/cancel_reservation',
-    'uses'=>'CovoiturageController@cancel_reservation'
+    'uses'=>'CovoiturageController@cancel_reservation',
+    'middleware' => 'auth'
 ]);
 Route::post('covoiturage/supprimer',[
     'as'=>'covoiturage/destroy',
-    'uses'=>'CovoiturageController@destroy'
+    'uses'=>'CovoiturageController@destroy',
+    'middleware' => 'auth'
 ]);
 /*-------------------------------------------------------------*/
 Route::get('profil/{id}', [
@@ -77,20 +89,24 @@ Route::get('profil/{id}', [
 
 Route::get('profil/editer', [
     'as'=>'user/edit',
-    'uses'=>'UserController@edit'
+    'uses'=>'UserController@edit',
+    'middleware' => 'auth'
 ]);
 Route::post('profil/enregistrer',[
     'as'=>'user/store',
-    'uses'=>'UserController@store'
+    'uses'=>'UserController@store',
+    'middleware' => 'auth'
 ]);
 /*-------------------------------------------------------------*/
 Route::post('commentaire/enregistrer',[
     'as'=>'comment/store',
-    'uses'=>'CommentaireController@store'
+    'uses'=>'CommentaireController@store',
+    'middleware' => 'auth'
 ]);
 Route::post('note/enregistrer',[
     'as'=>'note/store',
-    'uses'=>'NoteController@store'
+    'uses'=>'NoteController@store',
+    'middleware' => 'auth'
 ]);
 
 /*-------------------------------------------------------------*/
@@ -102,10 +118,12 @@ Route::get('comment_ca_marche',[
 /*-------------------------------------------------------------*/
 Route::get('notification',[
    'as'=>'notifier',
-    'uses'=>'NotificationController@show'
+    'uses'=>'NotificationController@show',
+    'middleware' => 'auth'
 ]);
 Route::get('notificationVu/{id}',[
     'as'=>'notificationVu',
-    'uses'=>'NotificationController@notificationVu'
+    'uses'=>'NotificationController@notificationVu',
+    'middleware' => 'auth'
 ])->where(['id' => '[0-9]+']);
 

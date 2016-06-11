@@ -13,7 +13,7 @@ class NotificationController extends Controller
 
     public function show(){
 
-        $notifications= Auth::User()->notifications;
+        $notifications= Auth::User()->notifications()->orderBy('created_at','desc')->get();
         return view('notification')->with(compact('notifications'));
 
     }
