@@ -12,17 +12,17 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="{{url("../public/img/header1.jpg")}}" alt="photo1">
+          <img src="{{asset("img/header1.jpg")}}" alt="photo1">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="{{url("../public/img/header2.jpg")}}" alt="photo2">
+          <img src="{{asset("img/header2.jpg")}}" alt="photo2">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="{{url("../public/img/header3.jpg")}}" alt="photo3">
+          <img src="{{asset("img/header3.jpg")}}" alt="photo3">
           <div class="carousel-caption">
           </div>
         </div>
