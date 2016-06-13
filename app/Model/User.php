@@ -7,31 +7,56 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
-use Illuminate\Support\Facades\Storage;
 
 /**
  * App\Model\User
  *
- * @property integer $id 
- * @property string $email 
- * @property string $remember_token 
- * @property \Carbon\Carbon $created_at 
- * @property \Carbon\Carbon $updated_at 
- * @property string $nom 
- * @property string $prenom 
- * @property string $password 
- * @property string $genre 
- * @property string $date_nais 
- * @property string $num_tel 
- * @property boolean $pref_musique 
- * @property boolean $pref_animeaux 
- * @property boolean $pref_discussion 
- * @property boolean $pref_fumeur 
- * @property integer $ville_id 
- * @property string $description 
- * @property-read \App\Model\Ville $pathPhoto 
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Model\Covoiturage[] $moyenneAvis 
-  */
+ * @property integer $id
+ * @property string $email
+ * @property string $remember_token
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property string $nom
+ * @property string $prenom
+ * @property string $password
+ * @property string $genre
+ * @property string $date_nais
+ * @property string $num_tel
+ * @property boolean $pref_musique
+ * @property boolean $pref_animeaux
+ * @property boolean $pref_discussion
+ * @property boolean $pref_fumeur
+ * @property integer $ville_id
+ * @property string $description
+ * @property-read \App\Model\Ville $pathPhoto
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Model\Covoiturage[] $moyenneAvis
+ * @property-read \App\Model\Ville $ville
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Model\Notification[] $notifications
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Model\Commentaire[] $commentaires
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Model\Covoiturage[] $preinscriptions
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Model\Covoiturage[] $inscriptions
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Model\Covoiturage[] $conducteurCovoiturages
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Model\Note[] $notesRecu
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Model\Note[] $notesAttribuer
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User whereEmail($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User whereRememberToken($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User whereNom($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User wherePrenom($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User wherePassword($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User whereGenre($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User whereDateNais($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User whereNumTel($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User wherePrefMusique($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User wherePrefAnimeaux($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User wherePrefDiscussion($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User wherePrefFumeur($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User whereVilleId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Model\User whereDescription($value)
+ * @mixin \Eloquent
+ */
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract{
 
     use Authenticatable, CanResetPassword;
@@ -83,13 +108,13 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function pathPhoto($prefix = '')
     {
-        $file = $this->id . '.jpg';
-        if (Storage::exists($file)) {
-            $pathPhoto = '../storage/app/'. $prefix . $file;
+        $file = 'photos/' . $this->id . '.jpg';
+        if (file_exists($file)) {
+            $pathPhoto = $prefix . $file;
         } elseif ($this->genre == 'Homme') {
-            $pathPhoto = '../storage/app/'. $prefix .'Homme.jpg';
+            $pathPhoto = 'photos/'. $prefix .'Homme.jpg';
         } else {
-            $pathPhoto = '../storage/app/'. $prefix .'Femme.jpg';
+            $pathPhoto = 'photos/'. $prefix .'Femme.jpg';
         }
         return $pathPhoto;
     }

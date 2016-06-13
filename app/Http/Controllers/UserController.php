@@ -63,9 +63,8 @@ class UserController extends Controller {
       $user->pref_fumeur=$data['pref_fumeur'];
       $user->description=$data['description'];
       $user->save();
-
       if (Input::file('photo')) {
-          $destination = '../storage/app'; // path
+          $destination = 'photos'; // path
           $fileName = $user->getAttribute('id') . '.jpg'; // renameing image
           Input::file('photo')->move($destination, $fileName);
           // redimensionner
