@@ -110,7 +110,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     {
         $file = 'photos/' . $this->id . '.jpg';
         if (file_exists($file)) {
-            $pathPhoto = $prefix . $file;
+            $pathPhoto = 'photos/' . $prefix . $this->id . '.jpg';
         } elseif ($this->genre == 'Homme') {
             $pathPhoto = 'photos/'. $prefix .'Homme.jpg';
         } else {
